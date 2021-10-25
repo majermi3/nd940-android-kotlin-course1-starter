@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/roboto</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -15,5 +16,15 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="header">
+        <item name="android:textSize">@dimen/header_font_size</item>
+    </style>
+
+    <style name="layout">
+        <item name="android:layout_marginStart">@dimen/layout_margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/layout_margin_medium</item>
+    </style>
 
 </resources>
