@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -62,17 +63,21 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
-                //TODO Navigate to Onboarding
+                navigateToWelcome()
             }
         }
         binding.signUpButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
-                //TODO Navigate to Onboarding
+                navigateToWelcome()
             }
         }
 
         return binding.root
+    }
+
+    private fun navigateToWelcome() {
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
     }
 
     private fun showErrorMessage(): Boolean {

@@ -8,9 +8,21 @@
     <string name="name">Name</string>
     <string name="password">Password</string>
     <string name="password_again">Password again</string>
+    <string name="continue_button">Continue</string>
 
     <string name="invalid_name">Invalid Name</string>
     <string name="invalid_email">Invalid E-Mail</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="password_not_same">Passwords are not same</string>
+    <string name="welcome_header">Welcome</string>
+    <string name="welcome_text">
+        Dear user,
+        \n\n\t\twelcome to The Shoe Store. Shoes are here for some time and since the time of wooden
+        sandals has passed some time, there are genuinely hundreds of brands and thousands of
+        different models of shoes. We took the task up on ourselves to provide a tool that would
+        help small companies or even passionate shoe collectors to get organized. Enjoy the app and
+        feel free to give us 5 star rating.
+        \n\n\
+        Your Shoe Store
+    </string>
 </resources>

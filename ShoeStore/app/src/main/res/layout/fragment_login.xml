@@ -71,12 +71,11 @@
 
             <Button
                 android:id="@+id/login_button"
-                style="@style/Widget.AppCompat.Button.Colored"
+                style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/colorPrimary"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -150,12 +149,11 @@
 
             <Button
                 android:id="@+id/sign_up_button"
-                style="@style/Widget.AppCompat.Button.Colored"
+                style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/colorPrimary"
                 android:text="@string/sign_up"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
