@@ -7,13 +7,13 @@
     <data>
         <variable
             name="loginViewModel"
-            type="com.udacity.shoestore.screens.LoginViewModel" />
+            type="com.udacity.shoestore.screens.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screens.LoginFragment"
+        tools:context=".screens.login.LoginFragment"
         style="@style/layout">
 
 

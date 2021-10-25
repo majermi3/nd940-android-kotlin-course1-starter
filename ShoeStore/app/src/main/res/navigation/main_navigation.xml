@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.screens.LoginFragment"
+        android:name="com.udacity.shoestore.screens.login.LoginFragment"
         android:label="LoginFragment" />
 </navigation>
