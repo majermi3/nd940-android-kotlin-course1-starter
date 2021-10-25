@@ -25,4 +25,10 @@
         \n\n\
         Your Shoe Store
     </string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_text">
+        This applications provides to views for managing your shoes in just 2 simple views.
+        In the first one, you will find all your shoes and a \"+\" button that leads to the second
+        view for adding a new shoes to your list.
+    </string>
 </resources>

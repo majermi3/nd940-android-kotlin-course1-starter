@@ -4,27 +4,26 @@
 
     </data>
     <LinearLayout
-        style="@style/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        style="@style/layout">
 
 
         <TextView
-            android:id="@+id/welcome_header"
+            android:id="@+id/instructions_header"
             style="@style/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_header"
+            android:text="@string/instructions"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/welcome_text"
+            android:id="@+id/instructions_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:lineSpacingExtra="4sp"
-            android:text="@string/welcome_text" />
+            android:text="@string/instructions_text" />
 
         <Button
             android:id="@+id/button"
