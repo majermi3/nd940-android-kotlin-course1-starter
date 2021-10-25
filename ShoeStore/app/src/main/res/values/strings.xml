@@ -5,4 +5,7 @@
     <string name="login">Login</string>
     <string name="email">E-Mail</string>
     <string name="password">Password</string>
+
+    <string name="invalid_email">Invalid E-Mail</string>
+    <string name="invalid_password">Invalid Password</string>
 </resources>
