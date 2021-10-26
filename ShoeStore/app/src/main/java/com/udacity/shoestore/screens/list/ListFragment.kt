@@ -10,9 +10,11 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.screens.login.LoginFragmentDirections
 
 class ListFragment : Fragment() {
 
@@ -40,6 +42,10 @@ class ListFragment : Fragment() {
         primaryColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary);
 
         addShoesToList(binding.shoeList)
+
+        binding.addButton.setOnClickListener {
+            findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment())
+        }
 
         return binding.root
     }

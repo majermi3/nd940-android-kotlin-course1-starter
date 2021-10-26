@@ -33,4 +33,9 @@
         view for adding a new shoes to your list.
     </string>
     <string name="add_button_description">Add button</string>
+    <string name="detail_header">Add new shoe</string>
+    <string name="shoe_name_hint">Name</string>
+    <string name="add">Add</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
 </resources>
