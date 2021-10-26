@@ -9,6 +9,7 @@
     <string name="password">Password</string>
     <string name="password_again">Password again</string>
     <string name="continue_button">Continue</string>
+    <string name="size_label">Size: %s</string>
 
     <string name="invalid_name">Invalid Name</string>
     <string name="invalid_email">Invalid E-Mail</string>
