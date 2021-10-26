@@ -32,4 +32,5 @@
         In the first one, you will find all your shoes and a \"+\" button that leads to the second
         view for adding a new shoes to your list.
     </string>
+    <string name="add_button_description">Add button</string>
 </resources>
