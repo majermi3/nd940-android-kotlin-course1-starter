@@ -58,7 +58,7 @@ class ListFragment : Fragment() {
 
     private fun addShoeToList(view: LinearLayout, shoe: Shoe) {
         val header = TextView(context)
-        header.text = "${shoe.company} - ${shoe.name}"
+        header.text = getString(R.string.company_name_label, shoe.company, shoe.name)
         header.textSize = 24.0F
         header.setTextColor(primaryColor)
 

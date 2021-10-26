@@ -36,37 +36,52 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header" />
 
-        <Spinner
-            android:id="@+id/company"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/company_label"
+            style="@style/form_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:background="@drawable/border_bottom"
+            android:paddingBottom="4dp"
+            android:text="@string/company"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <Spinner
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/company_label"
+            app:layout_constraintTop_toTopOf="@+id/company_label" />
 
         <EditText
             android:id="@+id/size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/size"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/company" />
+            app:layout_constraintTop_toBottomOf="@+id/company_label" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:height="60dp"
             android:ems="10"
-            android:gravity="start|top"
+            android:fadeScrollbars="false"
+            android:gravity="bottom|start"
             android:hint="@string/description"
             android:inputType="textMultiLine"
             android:minLines="10"
+            android:scrollbars="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/size" />
