@@ -13,6 +13,7 @@
     <string name="company_name_label">%s - %s</string>
 
     <string name="invalid_name">Invalid Name</string>
+    <string name="invalid_company">Invalid Company</string>
     <string name="invalid_email">Invalid E-Mail</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="password_not_same">Passwords are not same</string>

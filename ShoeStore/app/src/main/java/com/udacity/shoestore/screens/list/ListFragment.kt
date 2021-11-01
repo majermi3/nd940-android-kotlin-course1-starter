@@ -14,7 +14,6 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.screens.login.LoginFragmentDirections
 
 class ListFragment : Fragment() {
 
@@ -35,7 +34,16 @@ class ListFragment : Fragment() {
             false
         )
 
-        viewModel = ViewModelProvider(this).get(ListViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(ListViewModel::class.java)
+
+        if (arguments != null) {
+            val args = ListFragmentArgs.fromBundle(requireArguments())
+            if (args.shoe != null) {
+                viewModel.addShoe(args.shoe)
+            }
+        }
+
+
         binding.listViewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
