@@ -15,7 +15,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.screens.BaseFragment
-import com.udacity.shoestore.screens.login.LoginFragmentDirections
 
 class ListFragment : BaseFragment() {
 

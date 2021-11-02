@@ -44,4 +44,8 @@
     <string name="logout">Logout</string>
     <string name="preference_file_key">com.udacity.shoestore</string>
     <string name="saved_login_state">saved_login_state</string>
+    <string name="name_autofill_hint">Name of the shoe</string>
+    <string name="company_autofill_hint">Company/Manufacturer</string>
+    <string name="size_autofill_hint">Shoe size</string>
+    <string name="description_autofill_hint">Shoe description</string>
 </resources>
