@@ -35,7 +35,7 @@ class LoginFragment : BaseFragment() {
             false
         )
 
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(LoginViewModel::class.java)
         binding.loginViewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
@@ -64,12 +64,14 @@ class LoginFragment : BaseFragment() {
         binding.loginButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
+                viewModel.isLoggedIn.value = true
                 navigateToWelcome()
             }
         }
         binding.signUpButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
+                viewModel.isLoggedIn.value = true
                 navigateToWelcome()
             }
         }
