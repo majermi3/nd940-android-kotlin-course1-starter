@@ -50,12 +50,15 @@ class ListFragment : BaseFragment() {
                 viewModel.addShoe(args.shoe)
             }
         }
+        if (viewModel.hasShoes()) {
+            binding.noDataContainer.visibility = View.GONE
+        }
 
 
         binding.listViewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        primaryColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary);
+        primaryColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
 
         addShoesToList(binding.shoeList)
 

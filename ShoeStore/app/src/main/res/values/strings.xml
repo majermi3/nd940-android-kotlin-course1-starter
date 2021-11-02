@@ -48,4 +48,6 @@
     <string name="company_autofill_hint">Company/Manufacturer</string>
     <string name="size_autofill_hint">Shoe size</string>
     <string name="description_autofill_hint">Shoe description</string>
+    <string name="no_data_message">No shoes found. \nAdd some via the \"+\" button.</string>
+    <string name="warning_sign_description">Warning sign</string>
 </resources>
