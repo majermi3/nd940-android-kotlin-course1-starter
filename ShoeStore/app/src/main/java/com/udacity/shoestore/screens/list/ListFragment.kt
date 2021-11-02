@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -14,8 +15,9 @@ import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.screens.BaseFragment
 
-class ListFragment : Fragment() {
+class ListFragment : BaseFragment() {
 
     private lateinit var binding: FragmentListBinding
 
@@ -35,6 +37,7 @@ class ListFragment : Fragment() {
         )
 
         setHasOptionsMenu(true)
+        setDisplayHomeAsUpEnabled(false)
 
         viewModel = ViewModelProvider(requireActivity()).get(ListViewModel::class.java)
 
