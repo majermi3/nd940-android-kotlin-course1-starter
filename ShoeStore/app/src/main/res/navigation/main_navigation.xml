@@ -50,4 +50,13 @@
             android:id="@+id/action_detailFragment_to_listFragment"
             app:destination="@id/listFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.udacity.shoestore.screens.logout.LogoutFragment"
+        android:label="fragment_logout" >
+        <action
+            android:id="@+id/action_logoutFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
 </navigation>
