@@ -14,8 +14,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import com.udacity.shoestore.screens.BaseFragment
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment() {
 
     private lateinit var binding: FragmentLoginBinding
 
@@ -82,13 +83,13 @@ class LoginFragment : Fragment() {
 
     private fun showErrorMessage(): Boolean {
         if (!loginTabActive && !viewModel.isNameValid()) {
-            Toast.makeText(context, getString(R.string.invalid_name), Toast.LENGTH_LONG).show()
+            showLongToast(R.string.invalid_name)
         } else if (!viewModel.isEmailValid()) {
-            Toast.makeText(context, getString(R.string.invalid_email), Toast.LENGTH_LONG).show()
+            showLongToast(R.string.invalid_email)
         } else if (!viewModel.isPasswordValid()) {
-            Toast.makeText(context, getString(R.string.invalid_password), Toast.LENGTH_LONG).show()
+            showLongToast(R.string.invalid_password)
         } else if (!loginTabActive && !viewModel.isPasswordRepeatValid()) {
-            Toast.makeText(context, getString(R.string.password_not_same), Toast.LENGTH_LONG).show()
+            showLongToast(R.string.password_not_same)
         } else {
             return false
         }

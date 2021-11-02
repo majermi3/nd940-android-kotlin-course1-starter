@@ -50,16 +50,12 @@ class DetailFragment : BaseFragment() {
 
     private fun validateForm(): Boolean {
         if (!viewModel.shoe.value!!.hasName()) {
-            showErrorToast(R.string.invalid_name)
+            showLongToast(R.string.invalid_name)
         } else if (!viewModel.shoe.value!!.hasCompany()) {
-            showErrorToast(R.string.invalid_company)
+            showLongToast(R.string.invalid_company)
         } else {
             return true
         }
         return false
-    }
-
-    private fun showErrorToast(stringId: Int) {
-        Toast.makeText(context, getString(stringId), Toast.LENGTH_LONG).show()
     }
 }
