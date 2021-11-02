@@ -64,19 +64,27 @@ class LoginFragment : BaseFragment() {
         binding.loginButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
-                viewModel.isLoggedIn.value = true
+                saveLoginState()
                 navigateToWelcome()
             }
         }
         binding.signUpButton.setOnClickListener {
             hideKeyboard(it)
             if (!showErrorMessage()) {
-                viewModel.isLoggedIn.value = true
+                saveLoginState()
                 navigateToWelcome()
             }
         }
 
         return binding.root
+    }
+
+    private fun saveLoginState() {
+        val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
+        with (sharedPref.edit()) {
+            putBoolean(getString(R.string.saved_login_state), true)
+            apply()
+        }
     }
 
     private fun navigateToWelcome() {

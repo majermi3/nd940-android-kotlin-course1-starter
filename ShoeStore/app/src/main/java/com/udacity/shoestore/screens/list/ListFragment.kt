@@ -1,5 +1,6 @@
 package com.udacity.shoestore.screens.list
 
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
@@ -14,6 +15,7 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.screens.BaseFragment
+import com.udacity.shoestore.screens.login.LoginFragmentDirections
 
 class ListFragment : BaseFragment() {
 
@@ -27,6 +29,10 @@ class ListFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        if (!isLoggedIn()) {
+            findNavController().navigate(ListFragmentDirections.actionListFragmentToLoginFragment())
+        }
+
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_list,
@@ -69,6 +75,12 @@ class ListFragment : BaseFragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
+    }
+
+    private fun isLoggedIn(): Boolean {
+        val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
+
+        return sharedPref.getBoolean(getString(R.string.saved_login_state), false)
     }
 
     private fun addShoesToList(view: LinearLayout) {
