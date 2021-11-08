@@ -44,16 +44,9 @@ class ListFragment : BaseFragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(ListViewModel::class.java)
 
-        if (arguments != null) {
-            val args = ListFragmentArgs.fromBundle(requireArguments())
-            if (args.shoe != null) {
-                viewModel.addShoe(args.shoe)
-            }
-        }
         if (viewModel.hasShoes()) {
             binding.noDataContainer.visibility = View.GONE
         }
-
 
         binding.listViewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
@@ -100,7 +93,6 @@ class ListFragment : BaseFragment() {
         val size = TextView(context)
         size.text = getString(R.string.size_label, shoe.size.toString())
         size.setPadding(16, 4, 0,0)
-
 
         val description = TextView(context)
         description.text = shoe.description

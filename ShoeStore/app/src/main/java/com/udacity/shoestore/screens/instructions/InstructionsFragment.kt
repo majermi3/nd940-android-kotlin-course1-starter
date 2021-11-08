@@ -26,7 +26,7 @@ class InstructionsFragment : Fragment() {
         )
         binding.button.setOnClickListener {
             findNavController()
-                .navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListFragment(null))
+                .navigate(InstructionsFragmentDirections.actionInstructionsFragmentToListFragment())
         }
 
         return binding.root
