@@ -1,13 +1,7 @@
 package com.udacity.shoestore.models
 
 import android.os.Parcelable
-import android.widget.EditText
-import android.widget.TextView
-import androidx.databinding.BindingAdapter
-import androidx.databinding.InverseBindingAdapter
-import androidx.databinding.InverseBindingListener
 import kotlinx.android.parcel.Parcelize
-import timber.log.Timber
 
 @Parcelize
 data class Shoe(
