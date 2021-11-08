@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.detail.DetailFragment">
 
     <data>
         <variable
@@ -9,53 +9,48 @@
             type="com.udacity.shoestore.screens.detail.DetailViewModel" />
     </data>
 
+    <!-- This view has a scroll view for smaller devices (or when a user rotates his phone) so the
+    whole form can be accessed. Inside of the scroll view is a LinearLayout as that is fully sufficient
+    in this case and there is no need to define any constraints. -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:orientation="vertical"
             style="@style/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="32dp"
-            tools:context=".screens.detail.DetailFragment">
+            android:paddingBottom="32dp">
 
             <TextView
                 android:id="@+id/header"
                 style="@style/header"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/detail_header"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/detail_header" />
 
             <EditText
                 android:id="@+id/name"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:autofillHints="@string/name_autofill_hint"
                 android:ems="10"
                 android:hint="@string/name"
                 android:inputType="textPersonName"
-                android:text="@={detailViewModel.shoe.name}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/header"
-                android:autofillHints="@string/name_autofill_hint" />
+                android:text="@={detailViewModel.shoe.name}" />
 
             <EditText
                 android:id="@+id/company"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="@string/company"
-                android:text="@={detailViewModel.shoe.company}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/name"
                 android:autofillHints="@string/company_autofill_hint"
-                android:inputType="textPersonName" />
+                android:hint="@string/company"
+                android:inputType="textPersonName"
+                android:text="@={detailViewModel.shoe.company}" />
 
             <EditText
                 android:id="@+id/size"
@@ -66,18 +61,15 @@
                 android:hint="@string/size"
                 android:inputType="numberDecimal"
                 android:text="@={`` + detailViewModel.shoe.size}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/company"
                 android:autofillHints="@string/size_autofill_hint" />
 
             <EditText
                 android:id="@+id/editTextTextMultiLine"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:height="60dp"
+                android:autofillHints="@string/description_autofill_hint"
                 android:ems="10"
                 android:fadeScrollbars="false"
                 android:gravity="bottom|start"
@@ -85,22 +77,16 @@
                 android:inputType="textMultiLine"
                 android:minLines="10"
                 android:scrollbars="vertical"
-                android:text="@={detailViewModel.shoe.description}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/size"
-                android:autofillHints="@string/description_autofill_hint" />
+                android:text="@={detailViewModel.shoe.description}" />
 
             <Button
                 android:id="@+id/add_button"
                 style="@style/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/add"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+                android:layout_gravity="center_horizontal"
+                android:text="@string/add" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </layout>

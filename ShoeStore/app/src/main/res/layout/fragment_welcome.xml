@@ -3,12 +3,15 @@
     <data>
 
     </data>
+
+    <!--This is a very easy view and LinearLayout fits it the best. There is no need to over complicate
+    it.-->
+
     <LinearLayout
         style="@style/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
 
         <TextView
             android:id="@+id/welcome_header"

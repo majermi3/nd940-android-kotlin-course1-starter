@@ -3,6 +3,9 @@
     <data>
 
     </data>
+
+    <!-- This view is a very simple view and LinearLayout is the best fit for it. -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

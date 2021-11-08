@@ -8,6 +8,9 @@
             type="com.udacity.shoestore.screens.list.ListViewModel" />
     </data>
 
+    <!-- Here I have chosen the ConstraintLayout because I wanted the floating button to be at the
+    bottom of the screen. -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
