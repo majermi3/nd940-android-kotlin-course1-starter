@@ -20,9 +20,9 @@
     <string name="welcome_header">Welcome</string>
     <string name="welcome_text">
         Dear user,
-        \n\n\t\twelcome to The Shoe Store. Shoes are here for some time and since the time of wooden
-        sandals has passed some time, there are genuinely hundreds of brands and thousands of
-        different models of shoes. We took the task up on ourselves to provide a tool that would
+        \n\n\t\tWelcome to The Shoe Store. Shoes have been around for some time; since the time of wooden
+        sandals there are genuinely hundreds of brands and thousands of
+        different models. We have taken the task upon ourselves to provide a tool, that would
         help small companies or even passionate shoe collectors to get organized. Enjoy the app and
         feel free to give us 5 star rating.
         \n\n\
@@ -30,9 +30,9 @@
     </string>
     <string name="instructions">Instructions</string>
     <string name="instructions_text">
-        This applications provides to views for managing your shoes in just 2 simple views.
-        In the first one, you will find all your shoes and a \"+\" button that leads to the second
-        view for adding a new shoes to your list.
+        This application will get you organized in two simple steps.
+        In the first step, you will find all your shoes. Then just press the \"+\" button which leads you to the second
+        step where you can add a new shoe.
     </string>
     <string name="add_button_description">Add button</string>
     <string name="detail_header">Add new shoe</string>
